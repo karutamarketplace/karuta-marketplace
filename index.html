@@ -714,10 +714,14 @@
     */
 
     const CONFIG = {
-      applicationId: "YOUR_APPLICATION_ID",
-      permissions: "0",
-      scopes: ["bot", "applications.commands"]
-    };
+  inviteUrl: "https://discord.com/oauth2/authorize?client_id=1561284333287903264"
+};
+
+document.querySelectorAll(".invite-link").forEach(link => {
+  link.href = CONFIG.inviteUrl;
+  link.target = "_blank";
+  link.rel = "noopener noreferrer";
+});
 
     const inviteUrl = (() => {
       const url = new URL(
